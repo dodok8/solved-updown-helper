@@ -12,7 +12,9 @@
     "elysia": "latest"
   },
   "devDependencies": {
-    "bun-types": "latest"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "bun-types": "latest",
+    "prettier": "^3.2.5"
   },
   "module": "src/index.js"
 }
