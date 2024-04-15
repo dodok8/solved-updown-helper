@@ -4,6 +4,9 @@
   "semi": false,
   "singleQuote": true,
   "trailingComma": "none",
+  "plugins": ["@trivago/prettier-plugin-sort-imports"],
+  "importOrder": ["^w", "^[./]"],
   "importOrderSortSpecifiers": true,
-  "importOrderCaseInsensitive": true
+  "importOrderCaseInsensitive": true,
+  "importOrderSeparation": true
 }
