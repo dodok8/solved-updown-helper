@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'bun:test'
 
-import auth from '../src/modules/auth'
+import { app } from '../src/index'
 
 const BASE = 'http://localhost:3000'
 
@@ -9,7 +9,7 @@ describe('/auth', () => {
     const init = {
       method: 'POST'
     }
-    const response = await auth
+    const response = await app
       .handle(new Request(`${BASE}/auth/sign-up`, init))
       .then((res) => res.text())
 
@@ -19,8 +19,8 @@ describe('/auth', () => {
     const init = {
       method: 'POST'
     }
-    const response = await auth
-      .handle(new Request(`${BASE}/auth/sign-in`, init))
+    const response = await app
+      .handle(new Request(`${BASE}/auth/sign-in`))
       .then((res) => res.text())
 
     expect(response).toBe('This route is expected to sign in a user')
