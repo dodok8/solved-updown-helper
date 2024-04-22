@@ -20,7 +20,7 @@ describe('/auth', () => {
       method: 'POST'
     }
     const response = await app
-      .handle(new Request(`${BASE}/auth/sign-in`))
+      .handle(new Request(`${BASE}/auth/sign-in`, init))
       .then((res) => res.text())
 
     expect(response).toBe('This route is expected to sign in a user')
